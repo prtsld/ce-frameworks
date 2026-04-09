@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>BLUEPRINT • MATERIAL SELECTION • CIVIL ENGINEERING</title>
+    <style>
+        body { margin: 0; background: #0a2f6c; }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 998;
+        }
+
+        .grid-overlay-large {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 100px 100px;
+            pointer-events: none;
+            z-index: 997;
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<frameset frameborder="0" rows="90,*,50">
+    <frame name="top" src="banner.html" scrolling="no" marginwidth="0" marginheight="0"/>
+    <frameset cols="240,*">
+        <frame name="left" src="links.html" scrolling="auto" marginwidth="0" marginheight="0"/>
+        <frame name="right" src="body.html" scrolling="auto" marginwidth="0" marginheight="0"/>
+    </frameset>
+    <frame name="bottom" src="credits.html" scrolling="no" marginwidth="0" marginheight="0"/>
+</frameset>
+
+<div class="grid-overlay"></div>
+<div class="grid-overlay-large"></div>
+<div class="vignette"></div>
+
+<noframes>
+    <body bgcolor="#0a2f6c">
+        <p style="color: white; font-family: monospace;">Your browser does not support frames. <a href="body.html">View text version</a></p>
+    </body>
+</noframes>
+</html>

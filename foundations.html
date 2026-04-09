@@ -1,0 +1,242 @@
+<html>
+<head>
+    <title>FOUNDATIONS • SHEET S-002</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a2f6c;
+            font-family: 'Courier New', monospace;
+            padding: 35px;
+            overflow-y: auto;
+            height: 100%;
+            color: #cceeff;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content { position: relative; z-index: 1; }
+        
+        .title-block {
+            border: 2px solid #ffcc33;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: #ffcc33;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sheet-info {
+            font-size: 0.7rem;
+            color: #88aadd;
+            border-top: 1px solid #2a5f9c;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            font-weight: normal;
+            margin: 25px 0 15px 0;
+            color: #ffcc33;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #2a5f9c;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #cceeff;
+            margin-bottom: 20px;
+        }
+        
+        .spec-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a5f9c;
+            padding: 20px;
+            margin: 25px 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .spec-box:hover {
+            border-color: #ffcc33;
+            background: rgba(255, 204, 51, 0.05);
+        }
+        
+        .spec-box h3 {
+            margin-bottom: 15px;
+            color: #ffcc33;
+            font-size: 1rem;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            padding: 8px 0 8px 20px;
+            margin: 5px 0;
+            border-left: 2px solid #2a5f9c;
+            font-size: 0.8rem;
+            color: #cceeff;
+        }
+        
+        .box-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ffcc33;
+            font-size: 0.75rem;
+            color: #cceeff;
+            line-height: 1.6;
+        }
+        
+        .box-details p {
+            margin-bottom: 10px;
+            font-size: 0.75rem;
+        }
+        
+        .box-details ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .box-details li {
+            border-left-color: #ffcc33;
+            padding: 5px 0 5px 15px;
+        }
+        
+        .expand-hint {
+            font-size: 0.6rem;
+            color: #ffcc33;
+            margin-top: 12px;
+            text-align: right;
+            opacity: 0.7;
+        }
+        
+        .spec-box:hover .expand-hint {
+            opacity: 1;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #2a5f9c;
+            margin: 30px 0;
+        }
+        
+        .document-ref {
+            font-size: 0.6rem;
+            color: #2a5f9c;
+            text-align: center;
+        }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a2f6c; }
+        ::-webkit-scrollbar-thumb { background: #2a5f9c; }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="title-block">
+        <h2>FOUNDATIONS</h2>
+        <div class="sheet-info">SHEET S-002 • GEOTECHNICAL • STRUCTURAL ANALYSIS</div>
+    </div>
+    
+    <p>The materials selected for foundation systems must account for soil conditions, groundwater, structural loads, and long-term durability requirements. Improper material selection in foundations can lead to catastrophic structural failure.</p>
+    
+    <div class="spec-box" onclick="toggleBox(this)">
+        <h3>◧ PUBLIC SAFETY</h3>
+        <ul>
+            <li>Hyatt Regency walkway collapse (1981) — improper connection design led to 114 deaths</li>
+            <li>Rana Plaza collapse (2013) — substandard materials caused over 1,100 deaths</li>
+            <li>Morandi Bridge collapse (2018) — corrosion of steel reinforcement led to 43 deaths</li>
+        </ul>
+        <div class="box-details">
+            <p><strong>CASE STUDY: HYATT REGENCY WALKWAY (1981)</strong></p>
+            <p>The Hyatt Regency hotel walkway collapse remains one of the deadliest structural failures in U.S. history. The disaster occurred when two suspended walkways collapsed onto a crowded tea dance in the hotel lobby. Investigation revealed that a last-minute design change doubled the load on critical connection rods. The original design specified a single rod passing through both walkways, but the as-built design used two separate rods that effectively doubled the load on the lower connection point.</p>
+            <p><strong>Key Lessons for Material Selection:</strong></p>
+            <ul>
+                <li>Material verification protocols must catch design changes</li>
+                <li>Connection materials require safety factors of 3-5x expected loads</li>
+                <li>Regular inspections of steel connections prevented this tragedy</li>
+                <li>Communication between design and construction teams is critical</li>
+            </ul>
+            <p><strong>RANA PLAZA (2013):</strong> This building collapse in Bangladesh highlighted global inequities in construction standards. Substandard concrete (half the required strength) and undersized steel reinforcement caused the eight-story building to collapse, killing over 1,100 workers. The tragedy led to the Bangladesh Accord on Fire and Building Safety.</p>
+            <p><strong>MORANDI BRIDGE (2018):</strong> Corrosion of steel reinforcement and inadequate maintenance led to the collapse of this Italian bridge. The concrete had deteriorated due to carbonation and chloride ingress, allowing steel corrosion that reduced reinforcement cross-section by up to 50% in some areas.</p>
+            <p><em>Reference: ASCE Journal of Performance of Constructed Facilities, Vol. 33</em></p>
+        </div>
+        <div class="expand-hint">▼ CLICK TO EXPAND DETAILED CASE STUDIES ▼</div>
+    </div>
+    
+    <div class="spec-box" onclick="toggleBox(this)">
+        <h3>◨ ETHICAL RESPONSIBILITY</h3>
+        <ul>
+            <li>ASCE Code of Ethics requires prioritizing public safety, health, and welfare</li>
+            <li>Professional liability: improper material specification has legal consequences</li>
+            <li>Intergenerational equity: today's choices affect future generations</li>
+        </ul>
+        <div class="box-details">
+            <p><strong>ASCE CODE OF ETHICS - FUNDAMENTAL CANONS:</strong></p>
+            <ul>
+                <li>Canon 1: Engineers shall hold paramount the safety, health, and welfare of the public</li>
+                <li>Canon 4: Engineers shall act in professional matters for each employer or client as faithful agents or trustees</li>
+                <li>Canon 6: Engineers shall uphold and enhance the honor, integrity, and dignity of the profession</li>
+            </ul>
+            <p><strong>Professional Liability Considerations:</strong></p>
+            <p>Improper material specification can result in professional negligence claims. Courts often reference the "standard of care" - what a reasonably prudent engineer would do under similar circumstances. Following ASTM, ACI, and AISC standards establishes this standard of care.</p>
+            <p><strong>Intergenerational Equity Framework:</strong></p>
+            <ul>
+                <li>Structures designed for 50+ years affect multiple generations</li>
+                <li>Material choices impact future maintenance costs and safety</li>
+                <li>Sustainable materials reduce burden on future resource availability</li>
+                <li>Documentation must enable future engineers to understand design decisions</li>
+            </ul>
+            <p><em>Reference: ASCE Code of Ethics (2020 Revision) // NSPE Code of Ethics</em></p>
+        </div>
+        <div class="expand-hint">▼ CLICK TO EXPAND ETHICS FRAMEWORK ▼</div>
+    </div>
+    
+    <hr>
+    <div class="document-ref">REFERENCE: IBC CHAPTER 18 // ACI 318 CHAPTER 15 // ASCE 7 CHAPTER 12</div>
+</div>
+
+<script>
+    function toggleBox(boxElement) {
+        let details = boxElement.querySelector('.box-details');
+        let hint = boxElement.querySelector('.expand-hint');
+        if (details.style.display === 'none' || !details.style.display) {
+            details.style.display = 'block';
+            if (hint) hint.innerHTML = '▲ CLICK TO COLLAPSE ▲';
+        } else {
+            details.style.display = 'none';
+            if (hint) hint.innerHTML = '▼ CLICK TO EXPAND DETAILED CASE STUDIES ▼';
+        }
+    }
+    
+    document.querySelectorAll('.box-details').forEach(function(detail) {
+        detail.style.display = 'none';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<html>
+<head>
+    <title>PRACTICES • SHEET S-005</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a2f6c;
+            font-family: 'Courier New', monospace;
+            padding: 35px;
+            overflow-y: auto;
+            height: 100%;
+            color: #cceeff;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content { position: relative; z-index: 1; }
+        
+        .title-block {
+            border: 2px solid #ffcc33;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: #ffcc33;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sheet-info {
+            font-size: 0.7rem;
+            color: #88aadd;
+            border-top: 1px solid #2a5f9c;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            font-weight: normal;
+            margin: 25px 0 15px 0;
+            color: #ffcc33;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #2a5f9c;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #cceeff;
+            margin-bottom: 20px;
+        }
+        
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 35px 0;
+        }
+        
+        .practice-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a5f9c;
+            padding: 20px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .practice-card:hover {
+            border-color: #ffcc33;
+            background: rgba(255, 204, 51, 0.05);
+        }
+        
+        .practice-card h3 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #ffcc33;
+        }
+        
+        .practice-card ul {
+            list-style: none;
+        }
+        
+        .practice-card li {
+            padding: 6px 0;
+            font-size: 0.7rem;
+            color: #88aadd;
+            border-left: 2px solid #2a5f9c;
+            padding-left: 12px;
+            margin: 5px 0;
+        }
+        
+        .card-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ffcc33;
+        }
+        
+        .card-details p {
+            font-size: 0.7rem;
+            margin-bottom: 8px;
+        }
+        
+        .card-details ul {
+            margin: 8px 0;
+            padding-left: 15px;
+        }
+        
+        .card-details li {
+            border-left: none;
+            padding-left: 0;
+            font-size: 0.7rem;
+        }
+        
+        .expand-hint {
+            font-size: 0.55rem;
+            color: #ffcc33;
+            margin-top: 10px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        
+        .practice-card:hover .expand-hint {
+            opacity: 1;
+        }
+        
+        .conclusion-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a5f9c;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .conclusion-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #2a5f9c;
+            margin: 30px 0;
+        }
+        
+        .document-ref {
+            font-size: 0.6rem;
+            color: #2a5f9c;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) { 
+            .practice-grid { grid-template-columns: 1fr; }
+            body { padding: 20px; }
+        }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a2f6c; }
+        ::-webkit-scrollbar-thumb { background: #2a5f9c; }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="title-block">
+        <h2>BEST PRACTICES</h2>
+        <div class="sheet-info">SHEET S-005 • QUALITY ASSURANCE • STANDARDS COMPLIANCE</div>
+    </div>
+    
+    <p>Implementing systematic approaches to material selection ensures consistent, high-quality outcomes across all projects. These practices form the foundation of responsible engineering and quality assurance protocols.</p>
+    
+    <div class="practice-grid">
+        <div class="practice-card" onclick="toggleCard(this)">
+            <h3>TESTING AND STANDARDS</h3>
+            <ul>
+                <li>ASTM international — standards for testing and specifications</li>
+                <li>AASHTO — transportation material standards</li>
+                <li>field testing — on-site verification of delivered materials</li>
+                <li>third-party certification — independent quality assurance</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>ASTM KEY STANDARDS FOR CIVIL ENGINEERING:</strong></p>
+                <ul>
+                    <li>C39: Compressive Strength of Cylindrical Concrete Specimens</li>
+                    <li>C78: Flexural Strength of Concrete (Simple Beam with Third-Point Loading)</li>
+                    <li>A370: Mechanical Testing of Steel Products (tension, bend, hardness)</li>
+                    <li>D2487: Classification of Soils for Engineering Purposes</li>
+                    <li>E119: Fire Tests of Building Construction and Materials</li>
+                </ul>
+                <p><strong>FIELD TESTING PROTOCOLS:</strong></p>
+                <ul>
+                    <li>Concrete: Slump test (ASTM C143), air content (ASTM C231), temperature (ASTM C1064)</li>
+                    <li>Steel: Tensile coupons, bend tests, hardness (Rockwell, Brinell)</li>
+                    <li>Soil: Proctor density (ASTM D698), CBR (ASTM D1883), Atterberg limits</li>
+                    <li>NDT: Ultrasonic testing, radiography, magnetic particle inspection</li>
+                </ul>
+                <p><strong>QUALITY CONTROL FREQUENCY:</strong></p>
+                <ul>
+                    <li>Concrete: 1 set of cylinders per 100 cubic yards (min 5 sets per day)</li>
+                    <li>Steel: 1 coupon per heat of steel (each 20 tons)</li>
+                    <li>Welding: Visual inspection of 100% of welds; NDT for critical connections</li>
+                </ul>
+                <p><em>Reference: ASTM International Annual Book of Standards (Volume 04.02)</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR STANDARDS REFERENCE ▼</div>
+        </div>
+        
+        <div class="practice-card" onclick="toggleCard(this)">
+            <h3>LIFECYCLE ASSESSMENT</h3>
+            <ul>
+                <li>raw material extraction — mining, harvesting impacts</li>
+                <li>manufacturing — energy use, emissions during production</li>
+                <li>transportation — distance and mode to site</li>
+                <li>end-of-life — demolition, recycling, disposal</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>LCA STAGES (EN 15978 / ISO 14040):</strong></p>
+                <ul>
+                    <li>A1-A3: Product Stage (raw material supply, transport, manufacturing)</li>
+                    <li>A4-A5: Construction Process Stage (transport to site, construction/installation)</li>
+                    <li>B1-B7: Use Stage (use, maintenance, repair, replacement, operational energy/water)</li>
+                    <li>C1-C4: End-of-Life Stage (deconstruction, transport, waste processing, disposal)</li>
+                    <li>D: Benefits and loads beyond the system boundary (reuse, recovery, recycling)</li>
+                </ul>
+                <p><strong>SOFTWARE TOOLS FOR LCA:</strong></p>
+                <ul>
+                    <li>Tally: Revit plugin for whole-building LCA</li>
+                    <li>Athena Impact Estimator: Free, North American data</li>
+                    <li>One Click LCA: Cloud-based, international databases</li>
+                    <li>EC3 (Embodied Carbon in Construction Calculator): Free, building materials focus</li>
+                </ul>
+                <p><strong>TYPICAL CARBON INTENSITIES (kg CO2e per unit):</strong></p>
+                <ul>
+                    <li>Concrete (25 MPa): 150-200 kg/m³</li>
+                    <li>Structural steel: 1,500-2,000 kg/ton</li>
+                    <li>Timber: -500 to -800 kg/m³ (carbon negative when sustainably sourced)</li>
+                    <li>Insulation (fiberglass): 20-40 kg/m³</li>
+                </ul>
+                <p><em>Reference: ISO 14044 - Environmental Management / Life Cycle Assessment</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR LCA METHODOLOGY ▼</div>
+        </div>
+        
+        <div class="practice-card" onclick="toggleCard(this)">
+            <h3>STAKEHOLDER CONSIDERATIONS</h3>
+            <ul>
+                <li>client requirements — budget, aesthetics, project goals</li>
+                <li>contractor input — constructability, local expertise</li>
+                <li>community impact — local sourcing, neighborhood character</li>
+                <li>regulatory requirements — building codes, environmental regulations</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>STAKEHOLDER ENGAGEMENT MATRIX:</strong></p>
+                <ul>
+                    <li><strong>High Power, High Interest:</strong> Manage Closely (clients, regulators, investors)</li>
+                    <li><strong>High Power, Low Interest:</strong> Keep Satisfied (government agencies, utilities)</li>
+                    <li><strong>Low Power, High Interest:</strong> Keep Informed (neighbors, advocacy groups, future users)</li>
+                    <li><strong>Low Power, Low Interest:</strong> Monitor (general public, media)</li>
+                </ul>
+                <p><strong>COMMUNITY BENEFIT AGREEMENTS (CBAs):</strong></p>
+                <ul>
+                    <li>Local hiring commitments (20-50% of workforce from local community)</li>
+                    <li>Local material sourcing (minimum 30% within 100 miles)</li>
+                    <li>Traffic management plans during construction</li>
+                    <li>Noise and dust mitigation measures</li>
+                    <li>Affordable housing contributions (if applicable)</li>
+                </ul>
+                <p><strong>REGULATORY FRAMEWORKS:</strong></p>
+                <ul>
+                    <li>International Building Code (IBC) - Chapter 16: Structural Design</li>
+                    <li>Americans with Disabilities Act (ADA) - Accessibility requirements</li>
+                    <li>National Environmental Policy Act (NEPA) - Environmental review</li>
+                    <li>Local zoning ordinances - Height, setbacks, use restrictions</li>
+                </ul>
+                <p><em>Reference: PMI - Stakeholder Management Framework</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR ENGAGEMENT FRAMEWORK ▼</div>
+        </div>
+        
+        <div class="practice-card" onclick="toggleCard(this)">
+            <h3>DOCUMENTATION AND TRACEABILITY</h3>
+            <ul>
+                <li>material specifications — clear documentation of required properties</li>
+                <li>certificates of compliance — verification from suppliers</li>
+                <li>test reports — results from quality control testing</li>
+                <li>as-built documentation — record of materials actually installed</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>REQUIRED DOCUMENTATION BY PROJECT PHASE:</strong></p>
+                <ul>
+                    <li><strong>Design Phase:</strong> Material specifications, basis of design reports, reference standards</li>
+                    <li><strong>Procurement Phase:</strong> Mill certificates, supplier qualifications, material test reports (MTRs)</li>
+                    <li><strong>Construction Phase:</strong> Delivery tickets, batch plant reports, field test results, inspection logs</li>
+                    <li><strong>Closeout Phase:</strong> As-built drawings, warranty documents, O&M manuals, BIM models</li>
+                </ul>
+                <p><strong>TRACEABILITY REQUIREMENTS:</strong></p>
+                <ul>
+                    <li>Concrete: Batch plant ticket includes mix design ID, date, quantity, delivery time</li>
+                    <li>Steel: Heat number traceable to mill certificate (stamped on each piece)</li>
+                    <li>Timber: Grading stamp (species, grade, moisture content, certification agency)</li>
+                    <li>Welding: Welder qualification records, procedure specifications, inspection reports</li>
+                </ul>
+                <p><strong>RETENTION PERIODS:</strong></p>
+                <ul>
+                    <li>Construction records: Minimum 7 years after project completion</li>
+                    <li>Critical safety documentation: Life of structure + 10 years</li>
+                    <li>As-built drawings: Perpetual (maintained by building owner)</li>
+                </ul>
+                <p><em>Reference: ISO 9001 - Quality Management Systems</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR DOCUMENTATION STANDARDS ▼</div>
+        </div>
+    </div>
+    
+    <div class="conclusion-box">
+        <div class="conclusion-text">By following these best practices, civil engineers can ensure that material selection contributes to structures that are safe, sustainable, and economically viable for generations to come.</div>
+    </div>
+    
+    <hr>
+    <div class="document-ref">REFERENCE: QUALITY ASSURANCE MANUAL • PROJECT SPECIFICATION 00900</div>
+</div>
+
+<script>
+    function toggleCard(cardElement) {
+        let details = cardElement.querySelector('.card-details');
+        let hint = cardElement.querySelector('.expand-hint');
+        if (details.style.display === 'none' || !details.style.display) {
+            details.style.display = 'block';
+            if (hint) hint.innerHTML = '▲ CLICK TO COLLAPSE ▲';
+        } else {
+            details.style.display = 'none';
+            if (hint) hint.innerHTML = '▼ CLICK FOR DOCUMENTATION STANDARDS ▼';
+        }
+    }
+    
+    document.querySelectorAll('.card-details').forEach(function(detail) {
+        detail.style.display = 'none';
+    });
+</script>
+</body>
+</html>

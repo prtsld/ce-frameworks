@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>DRAWING BLOCK • CREDITS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a2f6c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
+            height: 100%;
+            border-top: 1px solid #2a5f9c;
+            position: relative;
+        }
+        
+        /* Grid overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+        
+        .drawing-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 8px 20px;
+            font-size: 0.6rem;
+            color: #88aadd;
+            font-family: monospace;
+        }
+        
+        .block-left {
+            text-align: left;
+        }
+        
+        .block-center {
+            text-align: center;
+        }
+        
+        .block-right {
+            text-align: right;
+        }
+        
+        .stamp {
+            color: #ffcc33;
+            border: 1px solid #ffcc33;
+            padding: 2px 8px;
+            margin-left: 10px;
+            font-size: 0.55rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="drawing-block">
+        <div class="block-left">
+            SCALE: NTS
+        </div>
+        <div class="block-center">
+            © 2026 MATERIAL ADVOCACY • ALL RIGHTS RESERVED
+        </div>
+        <div class="block-right">
+            DATE: 2026-04-07 <span class="stamp">APPROVED</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<html>
+<head>
+    <title>DRAWING INDEX • NAVIGATION</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a2f6c;
+            font-family: 'Courier New', 'Lucida Console', monospace;
+            padding: 20px 12px;
+            height: 100%;
+            overflow-y: auto;
+            border-right: 1px solid #ffcc33;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+        
+        .drawing-list-header {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ffcc33;
+            margin-bottom: 25px;
+        }
+        
+        .drawing-list-header h3 {
+            font-weight: normal;
+            font-size: 10px;
+            color: #ffcc33;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .drawing-list-header p {
+            font-size: 8px;
+            color: #88aadd;
+            margin-top: 5px;
+        }
+        
+        .nav-item {
+            display: block;
+            padding: 10px 12px;
+            margin: 8px 0;
+            color: #cceeff;
+            text-decoration: none;
+            font-size: 10px;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-left: 3px solid #2a5f9c;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-item:hover {
+            background: rgba(255, 204, 51, 0.1);
+            color: #ffcc33;
+            border-left-color: #ffcc33;
+            padding-left: 18px;
+        }
+        
+        .sheet-number {
+            color: #ffcc33;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .specs-container {
+            margin-top: 35px;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 1px solid #2a5f9c;
+            border-bottom: 1px solid #2a5f9c;
+        }
+        
+        .spec-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            color: #88aadd;
+            padding: 3px 10px;
+            font-size: 0.6rem;
+            margin: 3px;
+            font-family: monospace;
+            letter-spacing: 1px;
+            border: 0.5px solid #2a5f9c;
+        }
+        
+        .music-player {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a5f9c;
+            text-align: center;
+        }
+        
+        .music-player h4 {
+            color: #ffcc33;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .music-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .music-btn {
+            background: rgba(255, 204, 51, 0.2);
+            border: 1px solid #ffcc33;
+            color: #ffcc33;
+            padding: 6px 15px;
+            font-size: 10px;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .music-btn:hover {
+            background: #ffcc33;
+            color: #0a2f6c;
+        }
+        
+        .music-status {
+            font-size: 9px;
+            color: #88aadd;
+            margin-top: 8px;
+            font-family: monospace;
+        }
+        
+        .footer-text {
+            text-align: center;
+            font-size: 0.55rem;
+            color: #2a5f9c;
+            font-family: monospace;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #2a5f9c;
+        }
+        
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0a2f6c; }
+        ::-webkit-scrollbar-thumb { background: #2a5f9c; }
+        ::-webkit-scrollbar-thumb:hover { background: #ffcc33; }
+    </style>
+</head>
+<body>
+    <div class="drawing-list-header">
+        <h3>DRAWING INDEX</h3>
+        <p>SHEET LIST • STRUCTURAL</p>
+    </div>
+    
+    <a href="body.html" target="right" class="nav-item"><span class="sheet-number">S-001</span> GENERAL NOTES</a>
+    <a href="foundations.html" target="right" class="nav-item"><span class="sheet-number">S-002</span> FOUNDATIONS</a>
+    <a href="materials.html" target="right" class="nav-item"><span class="sheet-number">S-003</span> MATERIAL SPECIFICATIONS</a>
+    <a href="sustainability.html" target="right" class="nav-item"><span class="sheet-number">S-004</span> SUSTAINABILITY</a>
+    <a href="practices.html" target="right" class="nav-item"><span class="sheet-number">S-005</span> BEST PRACTICES</a>
+
+    <div class="music-player">
+        <h4>◉ AUDIO FEED</h4>
+        <div class="music-controls">
+            <button class="music-btn" id="playBtn">▶ PLAY</button>
+            <button class="music-btn" id="pauseBtn">⏸ PAUSE</button>
+        </div>
+        <div class="music-status" id="musicStatus">STATUS: STOPPED</div>
+    </div>
+    
+    <div class="specs-container">
+        <span class="spec-tag">ASTM C39</span>
+        <span class="spec-tag">AISC 360</span>
+        <span class="spec-tag">ACI 318</span>
+        <span class="spec-tag">ASCE 7</span>
+        <span class="spec-tag">ISO 14001</span>
+    </div>
+    
+    <div class="footer-text">
+        [ APPROVED FOR CONSTRUCTION ]
+    </div>
+
+    <script>
+        let audio = new Audio();
+        audio.loop = true;
+        audio.volume = 0.3;
+        
+        audio.src = "music.mp3";
+        audio.src = "you-make-me-sick.mp3";
+        
+        let statusDiv = document.getElementById('musicStatus');
+        let playBtn = document.getElementById('playBtn');
+        let pauseBtn = document.getElementById('pauseBtn');
+        
+        function updateStatus() {
+            if (statusDiv) {
+                if (audio.paused) {
+                    statusDiv.innerHTML = "STATUS: STOPPED";
+                } else {
+                    statusDiv.innerHTML = "STATUS: PLAYING";
+                }
+            }
+        }
+        
+        playBtn.onclick = function() {
+            audio.play()
+                .then(() => {
+                    console.log("Music started!");
+                    updateStatus();
+                })
+                .catch(e => {
+                    console.log("Error playing:", e);
+                    statusDiv.innerHTML = "STATUS: ERROR - Click page first";
+                });
+        };
+        
+        pauseBtn.onclick = function() {
+            audio.pause();
+            updateStatus();
+        };
+        
+        document.addEventListener('click', function initAudio() {
+            audio.play()
+                .then(() => {
+                    console.log("Auto-play started!");
+                    updateStatus();
+                })
+                .catch(e => console.log("Auto-play blocked"));
+            document.removeEventListener('click', initAudio);
+        }, { once: true });
+        
+        updateStatus();
+    </script>
+</body>
+</html>

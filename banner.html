@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>BLUEPRINT • TITLE BLOCK</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0a2f6c;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', 'Lucida Console', 'Consolas', monospace;
+            border-bottom: 2px solid #ffcc33;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+
+        .title-block {
+            text-align: center;
+            width: 100%;
+            padding: 12px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: normal;
+            letter-spacing: 3px;
+            color: #ffcc33;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+            text-shadow: none;
+        }
+
+        h1 span {
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+        .project-id {
+            font-size: 0.65rem;
+            color: #88aadd;
+            margin-top: 6px;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+
+        .drawing-number {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.6rem;
+            color: #88aadd;
+            border: 1px solid #88aadd;
+            padding: 4px 10px;
+            font-family: monospace;
+        }
+
+        .revision {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.6rem;
+            color: #ffcc33;
+            border: 1px solid #ffcc33;
+            padding: 4px 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="drawing-number">SHEET 001</div>
+    <div class="title-block">
+        <h1>MATERIAL SELECTION <span>IN</span> CIVIL ENGINEERING</h1>
+        <div class="project-id">PROJECT NO. CE-2026-001 // STRUCTURAL MATERIALS ANALYSIS</div>
+    </div>
+    <div class="revision">REV. A</div>
+</body>
+</html>
+  

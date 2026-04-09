@@ -1,0 +1,285 @@
+<html>
+<head>
+    <title>MATERIALS • SHEET S-003</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #0a2f6c;
+            font-family: 'Courier New', monospace;
+            padding: 35px;
+            overflow-y: auto;
+            height: 100%;
+            color: #cceeff;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .content { position: relative; z-index: 1; }
+        
+        .title-block {
+            border: 2px solid #ffcc33;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: #ffcc33;
+            text-transform: uppercase;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sheet-info {
+            font-size: 0.7rem;
+            color: #88aadd;
+            border-top: 1px solid #2a5f9c;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            font-weight: normal;
+            margin: 25px 0 15px 0;
+            color: #ffcc33;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #2a5f9c;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #cceeff;
+            margin-bottom: 20px;
+        }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .material-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #2a5f9c;
+            padding: 20px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .material-card:hover {
+            border-color: #ffcc33;
+            background: rgba(255, 204, 51, 0.05);
+        }
+        
+        .material-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #ffcc33;
+        }
+        
+        .material-card ul {
+            list-style: none;
+        }
+        
+        .material-card li {
+            padding: 5px 0;
+            font-size: 0.75rem;
+            color: #88aadd;
+        }
+        
+        .card-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ffcc33;
+            font-size: 0.7rem;
+            color: #cceeff;
+        }
+        
+        .card-details p {
+            margin-bottom: 8px;
+            font-size: 0.7rem;
+        }
+        
+        .card-details ul {
+            margin: 8px 0;
+            padding-left: 15px;
+        }
+        
+        .card-details li {
+            padding: 3px 0;
+            font-size: 0.7rem;
+        }
+        
+        .expand-hint {
+            font-size: 0.55rem;
+            color: #ffcc33;
+            margin-top: 10px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        
+        .material-card:hover .expand-hint {
+            opacity: 1;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #2a5f9c;
+            margin: 30px 0;
+        }
+        
+        .document-ref {
+            font-size: 0.6rem;
+            color: #2a5f9c;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) { 
+            .material-grid { grid-template-columns: 1fr; }
+            body { padding: 20px; }
+        }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a2f6c; }
+        ::-webkit-scrollbar-thumb { background: #2a5f9c; }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="title-block">
+        <h2>MATERIAL SPECIFICATIONS</h2>
+        <div class="sheet-info">SHEET S-003 • ASTM COMPLIANCE • STRUCTURAL MATERIALS</div>
+    </div>
+    
+    <p>Understanding the properties, advantages, and limitations of traditional construction materials is essential for making informed selection decisions. Each material must meet applicable ASTM, ACI, or AISC standards.</p>
+    
+    <div class="material-grid">
+        <div class="material-card" onclick="toggleCard(this)">
+            <h3>CONCRETE</h3>
+            <ul>
+                <li>advantages: high compressive strength, fire resistance, moldability</li>
+                <li>limitations: low tensile strength, high carbon footprint</li>
+                <li>applications: foundations, beams, dams, bridges</li>
+                <li>standard: ASTM C39, ACI 318</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>COMPREHENSIVE MATERIAL DATA:</strong></p>
+                <ul>
+                    <li>Compressive strength range: 2,500 - 15,000+ psi (17-103 MPa)</li>
+                    <li>Modulus of elasticity: 3,000 - 5,000 ksi (20-35 GPa)</li>
+                    <li>Density: 140-150 lb/ft³ (2,240-2,400 kg/m³)</li>
+                    <li>Thermal expansion coefficient: 5.5 x 10⁻⁶ /°F (10 x 10⁻⁶ /°C)</li>
+                    <li>Carbon footprint: 0.9 tons CO2 per ton of cement</li>
+                    <li>Reinforcement required: minimum 0.18% of cross-sectional area</li>
+                </ul>
+                <p><strong>MIX DESIGN CONSIDERATIONS:</strong> Water-cement ratio (w/c) directly affects strength: lower w/c = higher strength but lower workability. Supplementary cementitious materials (fly ash, slag, silica fume) can reduce carbon footprint by 20-50% while improving durability.</p>
+                <p><em>Reference: ACI 301-16 Specifications for Structural Concrete</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR TECHNICAL SPECIFICATIONS ▼</div>
+        </div>
+        
+        <div class="material-card" onclick="toggleCard(this)">
+            <h3>STEEL</h3>
+            <ul>
+                <li>advantages: high strength-to-weight ratio, 100 percent recyclable</li>
+                <li>limitations: susceptible to corrosion, fire vulnerability</li>
+                <li>applications: structural frames, reinforcement bars, bridges</li>
+                <li>standard: ASTM A36, AISC 360</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>COMPREHENSIVE MATERIAL DATA:</strong></p>
+                <ul>
+                    <li>Yield strength: 36,000 - 100,000+ psi (248-690+ MPa)</li>
+                    <li>Tensile strength: 58,000 - 120,000+ psi (400-828+ MPa)</li>
+                    <li>Modulus of elasticity: 29,000 ksi (200 GPa)</li>
+                    <li>Density: 490 lb/ft³ (7,850 kg/m³)</li>
+                    <li>Thermal expansion: 6.5 x 10⁻⁶ /°F (11.7 x 10⁻⁶ /°C)</li>
+                    <li>Recycled content: up to 95% post-consumer</li>
+                </ul>
+                <p><strong>GRADE SELECTION GUIDE:</strong></p>
+                <ul>
+                    <li>A36: General structural applications (36 ksi yield)</li>
+                    <li>A572 Gr. 50: High-strength applications (50 ksi yield)</li>
+                    <li>A992: Wide-flange shapes for building construction (50 ksi yield)</li>
+                    <li>A500: Hollow structural sections (HSS) - 42-46 ksi yield</li>
+                </ul>
+                <p><strong>CORROSION PROTECTION:</strong> Coatings (paint, galvanized, weathering steel) add 20-50+ years of service life. Weathering steel (ASTM A588) forms a protective patina in suitable environments.</p>
+                <p><em>Reference: AISC Steel Construction Manual, 15th Edition</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR TECHNICAL SPECIFICATIONS ▼</div>
+        </div>
+        
+        <div class="material-card" onclick="toggleCard(this)">
+            <h3>TIMBER</h3>
+            <ul>
+                <li>advantages: renewable, carbon-storing, aesthetic</li>
+                <li>limitations: fire risk, moisture sensitivity</li>
+                <li>applications: residential, mass timber buildings, finishes</li>
+                <li>standard: NDS, ASTM D245</li>
+            </ul>
+            <div class="card-details">
+                <p><strong>COMPREHENSIVE MATERIAL DATA:</strong></p>
+                <ul>
+                    <li>Design values vary by species: 500-2,000+ psi bending (3.5-14 MPa)</li>
+                    <li>Modulus of elasticity: 1.2-2.0 million psi (8.3-13.8 GPa)</li>
+                    <li>Density: 25-45 lb/ft³ (400-720 kg/m³)</li>
+                    <li>Carbon sequestration: 1 ton CO2 per 1.3 tons of timber</li>
+                    <li>Moisture content at delivery: 19% maximum for dimensional lumber</li>
+                </ul>
+                <p><strong>MASS TIMBER PRODUCTS:</strong></p>
+                <ul>
+                    <li>CLT (Cross-Laminated Timber): Panels up to 10 ft x 60 ft</li>
+                    <li>Glulam (Glue-Laminated): Beams and columns up to 100+ ft spans</li>
+                    <li>DLT (Dowel-Laminated): No glue, mechanical connections</li>
+                    <li>LVL (Laminated Veneer Lumber): High-strength engineered product</li>
+                </ul>
+                <p><strong>FIRE PERFORMANCE:</strong> Mass timber forms a char layer (approximately 1.5 inches per hour of fire exposure) that protects the inner core. Heavy timber construction can achieve 1-2 hour fire ratings without additional coatings.</p>
+                <p><em>Reference: NDS 2018 - National Design Specification for Wood Construction</em></p>
+            </div>
+            <div class="expand-hint">▼ CLICK FOR TECHNICAL SPECIFICATIONS ▼</div>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="document-ref">REFERENCE: ASTM MANUAL OF TESTING STANDARDS // AISC STEEL CONSTRUCTION MANUAL</div>
+</div>
+
+<script>
+    function toggleCard(cardElement) {
+        let details = cardElement.querySelector('.card-details');
+        let hint = cardElement.querySelector('.expand-hint');
+        if (details.style.display === 'none' || !details.style.display) {
+            details.style.display = 'block';
+            if (hint) hint.innerHTML = '▲ CLICK TO COLLAPSE ▲';
+        } else {
+            details.style.display = 'none';
+            if (hint) hint.innerHTML = '▼ CLICK FOR TECHNICAL SPECIFICATIONS ▼';
+        }
+    }
+    
+    document.querySelectorAll('.card-details').forEach(function(detail) {
+        detail.style.display = 'none';
+    });
+</script>
+</body>
+</html>
